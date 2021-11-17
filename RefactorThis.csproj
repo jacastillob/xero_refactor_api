@@ -16,5 +16,13 @@
 
     <ItemGroup>
       <Folder Include="Services\" />
+      <Folder Include="Screenshot\" />
+      <Folder Include="DataSources\" />
+      <Folder Include="DataSources\Product\" />
+      <Folder Include="DataSources\ProductOptions\" />
+      <Folder Include="Models\Product\" />
+      <Folder Include="Models\ProductOption\" />
+      <Folder Include="Services\Product\" />
+      <Folder Include="Services\ProductOption\" />
     </ItemGroup>
 </Project>

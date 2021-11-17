@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using RefactorThis.Models;
+using RefactorThis;
 
 namespace RefactorThis.Controllers
 {
@@ -9,9 +9,9 @@ namespace RefactorThis.Controllers
     public class ProductsController : ControllerBase
     {
         [HttpGet]
-        public Products Get()
+        public Product Get()
         {
-            return new Products();
+            return new Product();
         }
 
         [HttpGet("{id}")]
@@ -53,9 +53,9 @@ namespace RefactorThis.Controllers
         }
 
         [HttpGet("{productId}/options")]
-        public ProductOptions GetOptions(Guid productId)
+        public ProductOption GetOptions(Guid productId)
         {
-            return new ProductOptions(productId);
+            return new ProductOption(productId);
         }
 
         [HttpGet("{productId}/options/{id}")]
