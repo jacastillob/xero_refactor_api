@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using RefactorThis;
+using RefactorThis.Services;
 
 namespace RefactorThis.Controllers
 {
@@ -9,9 +11,9 @@ namespace RefactorThis.Controllers
     public class ProductsController : ControllerBase
     {
         [HttpGet]
-        public Product Get()
+        public List<Product> Get()
         {
-            return new Product();
+            return ProductService.Instance.getProducts();
         }
 
         [HttpGet("{id}")]

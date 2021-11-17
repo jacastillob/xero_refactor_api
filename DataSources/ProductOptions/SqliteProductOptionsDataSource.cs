@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using RefactorThis.Models;
+using RefactorThis;
 
 namespace RefactorThis
 {
