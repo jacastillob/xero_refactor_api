@@ -21,14 +21,31 @@ namespace RefactorThis.Services
                     objService = new ProductService(new SqliteProductDataSource());
 
                 return objService;
-
             }
         }
-
         public List<Product> getProducts()
-        {
+        {   
             return datasource.getProducts();
-
+        }
+        public Product getProduct(Guid id)
+        {
+            return datasource.getProduct(id);
+        }
+        public void saveProduct(Product product)
+        {
+             product.IsNew = true;
+             datasource.saveProduct(product);
+        }
+        public void saveProduct(Product product,Guid id)
+        {
+            if (datasource.getProduct(id) != null  )
+            {
+                datasource.saveProduct(product);
+            }
+        }
+        public void deleteProduct(Guid id)
+        {
+            datasource.deleteProduct(id);
         }
     }
 }

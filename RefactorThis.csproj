@@ -26,5 +26,6 @@
       <Folder Include="Services\Product\" />
       <Folder Include="Services\ProductOption\" />
       <Folder Include="DataSources\Storage\" />
+      <Folder Include="Security\" />
     </ItemGroup>
 </Project>
