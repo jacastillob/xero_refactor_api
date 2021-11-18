@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Xunit;
 
 namespace RefactorThis.Services
 {
@@ -38,7 +39,8 @@ namespace RefactorThis.Services
         public void saveProduct(Product product,Guid id)
         {
             if (datasource.getProduct(id) != null  )
-            {   
+            {
+                product.Id = id;
                 datasource.saveProduct(product,false);
             }
         }
@@ -48,4 +50,5 @@ namespace RefactorThis.Services
             datasource.deleteProduct(id);
         }
     }
+    
 }

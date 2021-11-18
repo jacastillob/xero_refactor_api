@@ -61,8 +61,6 @@ namespace RefactorThis
 
         public void deleteProduct(Guid Id)
         {
-           
-
             var cmd = Sqlite.Instance.getConnection().CreateCommand();
             cmd.CommandText = $"delete from Products where id = '{Id}' collate nocase";
             cmd.ExecuteNonQuery();

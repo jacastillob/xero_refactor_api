@@ -15,6 +15,11 @@
 - Framework Migrated into 5.0
 - Web server Startup migrated to the 5.0 MVC implementation
 
+### Unit test included by Using xUnit-> (Microsoft.NET.Test.Sdk (Required))
+
+- Basic test suits that can be enhanced(Just Services included) 
+
+
 ### Architectural Pattern
 
 - An API must have more layers (Layered Pattern | MVC) to handle logic and to be extended -> Pattern implemented on its first iteration(more to do!)

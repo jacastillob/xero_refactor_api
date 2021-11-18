@@ -33,7 +33,8 @@ namespace RefactorThis.Services
             return datasource.getProductOption(productId,id);
         }
         public void saveProductOption(ProductOption product, Guid productId)
-        {   
+        {
+            product.ProductId = productId;
             datasource.saveProductOption(product,true);
         }
         public void updateProductOption(ProductOption product, Guid id)
