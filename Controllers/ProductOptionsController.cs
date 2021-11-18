@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using RefactorThis.Services;
 
 namespace RefactorThis.Controllers
 {
@@ -8,19 +10,15 @@ namespace RefactorThis.Controllers
     public class ProductOptionsController : ControllerBase
     {
         [HttpGet("{productId}/options")]
-        public ProductOption GetOptions(Guid productId)
-        {
-            return new ProductOption(productId);
+        public List<ProductOption> GetProductOptions(Guid productId)
+        {   
+            return ProductOptionService.Instance.getProductOptions(productId);
         }
 
         [HttpGet("{productId}/options/{id}")]
-        public ProductOption GetOption(Guid productId, Guid id)
+        public ProductOption GetProductOptionById(Guid productId, Guid id)
         {
-            var option = new ProductOption(id);
-            if (option.IsNew)
-                throw new Exception();
-
-            return option;
+            return ProductOptionService.Instance.getProductOptionById(id);
         }
 
         [HttpPost("{productId}/options")]

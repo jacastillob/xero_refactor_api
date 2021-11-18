@@ -6,6 +6,9 @@ namespace RefactorThis
 {
     public interface ProductOptionDataSource
     {
-        List<ProductOption> getProductOptions();
+        List<ProductOption> getProductOptions(Dictionary<string,string> dict);
+        ProductOption getProductOption(Guid id);
+        void saveProductOption(ProductOption product);
+        void deleteProductOption(Guid id);
     }
 }
