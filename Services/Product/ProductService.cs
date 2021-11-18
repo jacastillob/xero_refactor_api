@@ -12,7 +12,6 @@ namespace RefactorThis.Services
         {
             this.datasource = datasource;
         }
-
         public static ProductService Instance
         {
             get
@@ -32,19 +31,20 @@ namespace RefactorThis.Services
             return datasource.getProduct(id);
         }
         public void saveProduct(Product product)
-        {
-             product.IsNew = true;
-             datasource.saveProduct(product);
+        {    
+             product.Id = Guid.NewGuid();
+             datasource.saveProduct(product,true);
         }
         public void saveProduct(Product product,Guid id)
         {
             if (datasource.getProduct(id) != null  )
-            {
-                datasource.saveProduct(product);
+            {   
+                datasource.saveProduct(product,false);
             }
         }
         public void deleteProduct(Guid id)
         {
+            ProductOptionService.Instance.deleteProductOptionByProductId(id);
             datasource.deleteProduct(id);
         }
     }

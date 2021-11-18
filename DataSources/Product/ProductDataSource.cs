@@ -8,7 +8,7 @@ namespace RefactorThis
     {
         List<Product> getProducts();
         Product getProduct(Guid id);
-        void saveProduct(Product product);
+        void saveProduct(Product product, bool insert);
         void deleteProduct(Guid id);
     }
 }

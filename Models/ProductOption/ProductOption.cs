@@ -13,13 +13,7 @@ namespace RefactorThis
 
         public string Description { get; set; }
 
-        [JsonIgnore] public bool IsNew { get; set; }
-
-        public ProductOption()
-        {
-            Id = Guid.NewGuid();
-            IsNew = true;
-        }
+        
 
     }
 }

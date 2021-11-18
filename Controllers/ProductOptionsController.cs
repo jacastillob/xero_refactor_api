@@ -9,43 +9,36 @@ namespace RefactorThis.Controllers
     [ApiController]
     public class ProductOptionsController : ControllerBase
     {
-        [HttpGet("{productId}/options")]
+        [HttpGet("{productId}/option")]
         public List<ProductOption> GetProductOptions(Guid productId)
         {   
             return ProductOptionService.Instance.getProductOptions(productId);
         }
 
-        [HttpGet("{productId}/options/{id}")]
+        [HttpGet("{productId}/option/{id}")]
         public ProductOption GetProductOptionById(Guid productId, Guid id)
         {
-            return ProductOptionService.Instance.getProductOptionById(id);
+            return ProductOptionService.Instance.getProductOption(productId,id);
         }
 
-        [HttpPost("{productId}/options")]
-        public void CreateOption(Guid productId, ProductOption option)
+        [HttpPost("{productId}/option")]
+        public void SaveProductOption(Guid productId, ProductOption option)
         {
-            option.ProductId = productId;
-            option.Save();
+             ProductOptionService.Instance.saveProductOption(option,productId);
         }
 
-        [HttpPut("{productId}/options/{id}")]
-        public void UpdateOption(Guid id, ProductOption option)
+        [HttpPut("{productId}/option/{id}")]
+        public void UpdateProductOption(Guid id, ProductOption option)
         {
-            var orig = new ProductOption(id)
-            {
-                Name = option.Name,
-                Description = option.Description
-            };
-
-            if (!orig.IsNew)
-                orig.Save();
+            ProductOptionService.Instance.updateProductOption(option, id);
         }
 
-        [HttpDelete("{productId}/options/{id}")]
-        public void DeleteOption(Guid id)
+        [HttpDelete("{productId}/option/{id}")]
+        public void DeleteProductOption(Guid id)
         {
-            var opt = new ProductOption(id);
-            opt.Delete();
+
+            ProductOptionService.Instance.deleteProductOption(id);
+            
         }
 
     }

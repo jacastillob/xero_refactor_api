@@ -23,29 +23,36 @@ namespace RefactorThis.Services
                 return objService;
             }
         }
+
         public List<ProductOption> getProductOptions(Guid productId)
         {
-            return datasource.getProductOptions("");
+            return datasource.getProductOptions(productId);
         }
-        public ProductOption getProductOption(Guid id)
+        public ProductOption getProductOption(Guid productId,Guid id)
         {
-            return datasource.getProductOption(id);
+            return datasource.getProductOption(productId,id);
         }
-        public void saveProductOption(ProductOption product)
-        {
-            product.IsNew = true;
-            datasource.saveProductOption(product);
+        public void saveProductOption(ProductOption product, Guid productId)
+        {   
+            datasource.saveProductOption(product,true);
         }
-        public void saveProductOption(ProductOption product, Guid id)
+        public void updateProductOption(ProductOption product, Guid id)
         {
             if (datasource.getProductOption(id) != null)
-            {
-                datasource.saveProductOption(product);
+            {   
+                datasource.saveProductOption(product,false);
             }
         }
+
         public void deleteProductOption(Guid id)
         {
             datasource.deleteProductOption(id);
         }
+
+        public void deleteProductOptionByProductId(Guid productId)
+        {
+            datasource.deleteProductOptionByProductId(productId);
+        }
+        
     }
 }

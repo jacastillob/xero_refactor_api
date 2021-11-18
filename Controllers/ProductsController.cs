@@ -22,19 +22,19 @@ namespace RefactorThis.Controllers
             return ProductService.Instance.getProduct(id);
         }
         [HttpPost]
-        public void Post(Product product)
+        public void SaveProduct(Product product)
         {
              ProductService.Instance.saveProduct(product);
         }
         [HttpPut("{id}")]
-        public void Update(Guid id, Product product)
+        public void UpdateProduct(Guid id, Product product)
         {
             ProductService.Instance.saveProduct(product,id);
         }
         [HttpDelete("{id}")]
-        public void Delete(Guid id)
+        public void DeleteProduct(Guid id)
         {
-            ProductService.Instance.deleteProduct( id);
+            ProductService.Instance.deleteProduct(id);
         }
 
         

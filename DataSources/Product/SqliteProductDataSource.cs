@@ -24,8 +24,7 @@ namespace RefactorThis
                 return null;
 
             product = new Product()
-            {
-                IsNew=false,
+            {   
                 Id = Guid.Parse(rdr["Id"].ToString()),
                 Name = rdr["Name"].ToString(),
                 Description = (DBNull.Value == rdr["Description"]) ? null : rdr["Description"].ToString(),
@@ -50,11 +49,11 @@ namespace RefactorThis
             }
             return Items;
         }
-        public void saveProduct(Product product)
+        public void saveProduct(Product product, bool insert)
         {
             var cmd = Sqlite.Instance.getConnection().CreateCommand();
-            cmd.CommandText = product.IsNew
-                ? $"insert into Products (id, name, description, price, deliveryprice) values ('{product.Id}', '{product.Name}', '{product.Description}', {product.Price}, {product.DeliveryPrice})"
+            cmd.CommandText = insert
+                ? $"insert into Products (id, name, description, price, deliveryprice) values ('{Guid.NewGuid()}', '{product.Name}', '{product.Description}', {product.Price}, {product.DeliveryPrice})"
                 : $"update Products set name = '{product.Name}', description = '{product.Description}', price = {product.Price}, deliveryprice = {product.DeliveryPrice} where id = '{product.Id}' collate nocase";
 
             cmd.ExecuteNonQuery();
@@ -62,8 +61,7 @@ namespace RefactorThis
 
         public void deleteProduct(Guid Id)
         {
-            //foreach (var option in new ProductOptions(Id).Items)
-            //    option.Delete();
+           
 
             var cmd = Sqlite.Instance.getConnection().CreateCommand();
             cmd.CommandText = $"delete from Products where id = '{Id}' collate nocase";
