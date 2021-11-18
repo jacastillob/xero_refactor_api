@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using RefactorThis.Security;
 using Xunit;
 
 namespace RefactorThis.Services
@@ -24,7 +25,9 @@ namespace RefactorThis.Services
             }
         }
         public List<Product> getProducts()
-        {   
+        {
+            throw new Error("Problems loading product option", "SqliteProductOptionsDataSource.getProductOption", 0, new Exception());
+        
             return datasource.getProducts();
         }
         public Product getProduct(Guid id)

@@ -15,11 +15,14 @@ namespace RefactorThis.Security
             {
                 appError.Run(async context =>
                 {
+                   
                     context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                     context.Response.ContentType = "application/json";
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                     if (contextFeature != null)
                     {
+                        //TODO Enable Error Logger By Using the Exception Error Created
+                        
                         //logger.LogError($"Something went wrong: {contextFeature.Error}");
                         await context.Response.WriteAsync(new ErrorDetails()
                         {
