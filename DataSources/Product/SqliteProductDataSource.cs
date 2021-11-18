@@ -21,7 +21,7 @@ namespace RefactorThis
             try
             {
 
-                    
+                    //TODO To mitigate SQL injection, I could  use [SQLite - use sqlite3_prepare()]
                     cmd.CommandText = $"select * from Products where id = '{id}' collate nocase";
 
                     var rdr = cmd.ExecuteReader();
