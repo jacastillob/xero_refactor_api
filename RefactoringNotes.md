@@ -5,14 +5,20 @@
 
 ## Findings
 
+### .NEt Framework Migrated -> 5.0
+
+- Framework Migrated into 5.0
+- Web server Startup migrated to the 5.0 MVC implementation 
+
 ### Architectural Pattern
-- API usually have more layers (Layered Pattern | MVC)
+
+- API usually have more layers (Layered Pattern | MVC) -> Patter implemented on its first iteration
 
 ### SOLID principal
 
 - Models are breaking basic design principles such:
-    - Single Responsability -> Products,ProductOptions
-    - Dependancy inversion  -> SQLite connectio
+    - Single Responsability -> Products,ProductOptions,Product Controllers
+    - Dependancy inversion  -> SQLite connection
 
 ### Blocking Code
 
