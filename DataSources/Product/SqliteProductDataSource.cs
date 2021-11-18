@@ -17,10 +17,11 @@ namespace RefactorThis
         public Product getProduct(Guid id)
         {
             Product product = null;
+            var cmd = Sqlite.Instance.getConnection().CreateCommand();
             try
             {
 
-                    var cmd = Sqlite.Instance.getConnection().CreateCommand();
+                    
                     cmd.CommandText = $"select * from Products where id = '{id}' collate nocase";
 
                     var rdr = cmd.ExecuteReader();

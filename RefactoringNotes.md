@@ -32,7 +32,3 @@
     - Single Responsability -> Products,ProductOptions,Product Controllers
     - Dependancy inversion  -> SQLite connection
     - Dependancy inversion  -> Services
-
-### Blocking Code
-
-- Currently the way database connections and queries are handled will potentially lead into a Blocking Code,therefore, the products API won't be able to handle varirous requests

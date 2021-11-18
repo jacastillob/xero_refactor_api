@@ -22,7 +22,7 @@ namespace RefactorThis.Security
                     if (contextFeature != null)
                     {
                         //TODO Enable Error Logger By Using the Exception Error Created
-                        
+                        var error = contextFeature.Error;
                         //logger.LogError($"Something went wrong: {contextFeature.Error}");
                         await context.Response.WriteAsync(new ErrorDetails()
                         {

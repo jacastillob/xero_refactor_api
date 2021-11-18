@@ -1,30 +1,21 @@
 ﻿<Properties StartupConfiguration="{529176B5-F038-4745-A9B8-E87E9D226F6C}|Default">
   <MonoDevelop.Ide.ItemProperties.RefactorThis PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Security/ExceptionMiddlewareExtensions.cs">
-    <Files>
-      <File FileName="Services/Product/ProductService.cs" Line="29" Column="28" />
-      <File FileName="Services/ProductOption/ProductOptionService.cs" Line="1" Column="1" />
-      <File FileName=".gitignore" Line="5" Column="5" />
-      <File FileName="DataSources/Product/SqliteProductDataSource.cs" Line="93" Column="13" />
-      <File FileName="Security/Error.cs" Line="15" Column="30" />
-      <File FileName="DataSources/ProductOptions/SqliteProductOptionsDataSource.cs" Line="67" Column="14" />
-      <File FileName="DataSources/Product/ProductDataSource.cs" Line="1" Column="1" />
-      <File FileName="Security/ExceptionMiddlewareExtensions.cs" Line="25" Column="26" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RefactorThis" expanded="True">
-            <Node name="RefactorThis" expanded="True">
+            <Node name="RefactorThis" expanded="True" selected="True">
               <Node name="DataSources" expanded="True">
                 <Node name="Product" expanded="True" />
                 <Node name="ProductOptions" expanded="True" />
+                <Node name="Storage" expanded="True" />
               </Node>
-              <Node name="Security" expanded="True">
-                <Node name="ExceptionMiddlewareExtensions.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Security" expanded="True" />
               <Node name="Services" expanded="True">
                 <Node name="Product" expanded="True" />
+                <Node name="ProductOption" expanded="True" />
               </Node>
               <Node name="Tests" expanded="True" />
             </Node>
@@ -48,8 +39,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/jk4zt/Documents/Jk/CODE/Xero/code/xero_refactor_api/DataSources/Product/SqliteProductDataSource.cs" relfile="DataSources/Product/SqliteProductDataSource.cs" line="74" column="13" />
-      <Breakpoint file="/Users/jk4zt/Documents/Jk/CODE/Xero/code/xero_refactor_api/Security/ExceptionMiddlewareExtensions.cs" relfile="Security/ExceptionMiddlewareExtensions.cs" line="18" column="21" />
+      <Breakpoint file="/Users/jk4zt/Documents/Jk/CODE/Xero/code/xero_refactor_api/DataSources/Product/SqliteProductDataSource.cs" relfile="DataSources/Product/SqliteProductDataSource.cs" line="75" column="13" />
+      <Breakpoint file="/Users/jk4zt/Documents/Jk/CODE/Xero/code/xero_refactor_api/Security/ExceptionMiddlewareExtensions.cs" relfile="Security/ExceptionMiddlewareExtensions.cs" line="19" column="21" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
