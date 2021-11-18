@@ -1,23 +1,19 @@
 ﻿<Properties StartupConfiguration="{529176B5-F038-4745-A9B8-E87E9D226F6C}|Default">
   <MonoDevelop.Ide.ItemProperties.RefactorThis PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataSources/Product/SqliteProductDataSource.cs">
+    <Files>
+      <File FileName="DataSources/Product/SqliteProductDataSource.cs" Line="32" Column="20" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RefactorThis" expanded="True">
-            <Node name="RefactorThis" expanded="True" selected="True">
+            <Node name="RefactorThis" expanded="True">
               <Node name="DataSources" expanded="True">
-                <Node name="Product" expanded="True" />
-                <Node name="ProductOptions" expanded="True" />
-                <Node name="Storage" expanded="True" />
+                <Node name="Product" expanded="True">
+                  <Node name="SqliteProductDataSource.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="Models" expanded="True" />
-              <Node name="Security" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="Product" expanded="True" />
-                <Node name="ProductOption" expanded="True" />
-              </Node>
-              <Node name="Tests" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -27,7 +23,7 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="RefactorThis" selected="True" />
+          <Node name="RefactorThis" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -39,7 +35,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/jk4zt/Documents/Jk/CODE/Xero/code/xero_refactor_api/DataSources/Product/SqliteProductDataSource.cs" relfile="DataSources/Product/SqliteProductDataSource.cs" line="75" column="13" />
+      <Breakpoint file="/Users/jk4zt/Documents/Jk/CODE/Xero/code/xero_refactor_api/DataSources/Product/SqliteProductDataSource.cs" relfile="DataSources/Product/SqliteProductDataSource.cs" line="90" column="13" />
       <Breakpoint file="/Users/jk4zt/Documents/Jk/CODE/Xero/code/xero_refactor_api/Security/ExceptionMiddlewareExtensions.cs" relfile="Security/ExceptionMiddlewareExtensions.cs" line="19" column="21" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

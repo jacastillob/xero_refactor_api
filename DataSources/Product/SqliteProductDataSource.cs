@@ -21,10 +21,25 @@ namespace RefactorThis
             try
             {
 
-                    //TODO To mitigate SQL injection, I could  use [SQLite - use sqlite3_prepare()]
-                    cmd.CommandText = $"select * from Products where id = '{id}' collate nocase";
+                //TODO To mitigate SQL injection, I could  use [SQLite - use sqlite3_prepare()]
+                //String query = "SELECT account_balance FROM user_data WHERE user_name = ?";
+                //try
+                //{
+                //    OleDbCommand command = new OleDbCommand(query, Sqlite.Instance.getConnection());
+                //    command.Parameters.Add(new OleDbParameter("customerName", CustomerName Name.Text));
+                //    OleDbDataReader reader = command.ExecuteReader();
+                //    // …
+                //}
+                //catch (OleDbException se)
+                //{
+                //    // error handling
+                //}
 
-                    var rdr = cmd.ExecuteReader();
+                cmd.CommandText = $"select * from Products where id = '{id}' collate nocase";
+
+               
+
+                var rdr = cmd.ExecuteReader();
                     if (!rdr.Read())
                         return null;
 
